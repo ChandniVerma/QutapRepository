@@ -2,6 +2,7 @@ package com.exilant.controller;
 
 
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -45,9 +46,9 @@ public class ProjectInfoController {
 	}
 	
 	@GetMapping("/ProjectData/{projectId}")
-	public   Object getProjectInfo(@PathVariable String projectId,HttpServletRequest req) {
+	public   @ResponseBody Object getProjectInfo(@PathVariable String projectId,HttpServletRequest req) throws IOException {
 		Response response=Utils.getResponseObject("getting project details data");
-		try {
+		
 		
 		ProjectInfoModel projectInfoModel=projectInfoService.getProjectInfo(projectId);
 		if(projectInfoModel==null) {
@@ -55,16 +56,9 @@ public class ProjectInfoController {
 		}else {
 			response.setStatus(StatusCode.SUCCESS.name());
 			response.setUrl(req.getRequestURL().toString());
-			response.setData(projectInfoModel);
-			return   Utils.getJson(response);	
+			response.setData(projectInfoModel);	
 		}
-		}catch(Exception e) {
-			
-			response.setStatus(StatusCode.FAILURE.name());
-			response.setErrors(e.getMessage());
-			log.info(e.getMessage());
-		}
-		return null;
+		return Utils.getJson(response);
 		
 	}
 	@GetMapping("/ProjectData")
