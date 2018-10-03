@@ -2506,3 +2506,143 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2018-10-01 17:52:52.387  INFO 5009 --- [Thread-569] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
 2018-10-01 17:52:52.388  INFO 5009 --- [Thread-569] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
 2018-10-01 17:52:52.390  INFO 5009 --- [Thread-569] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:113, serverValue:118}] to localhost:27017 because the pool has been closed.
+2018-10-01 18:20:57.312  INFO 7396 --- [restartedMain] c.e.QutapApplication.QutapApplication    : Starting QutapApplication on EXIMR-IM-482 with PID 7396 (/Users/chandni.v/git/qutap/QutapApplication/target/classes started by chandni.v in /Users/chandni.v/git/qutap/QutapApplication)
+2018-10-01 18:20:57.314  INFO 7396 --- [restartedMain] c.e.QutapApplication.QutapApplication    : No active profile set, falling back to default profiles: default
+2018-10-01 18:20:57.358  INFO 7396 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@298557d: startup date [Mon Oct 01 18:20:57 IST 2018]; root of context hierarchy
+2018-10-01 18:20:59.213  INFO 7396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
+2018-10-01 18:20:59.232  INFO 7396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-10-01 18:20:59.232  INFO 7396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-10-01 18:20:59.237  INFO 7396 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/chandni.v/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-10-01 18:20:59.302  INFO 7396 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-10-01 18:20:59.303  INFO 7396 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1946 ms
+2018-10-01 18:21:00.007  INFO 7396 --- [localhost-startStop-1] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-10-01 18:21:00.007  INFO 7396 --- [localhost-startStop-1] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2018-10-01 18:21:00.057  INFO 7396 --- [cluster-ClusterId{value='5bb218341900ca1ce433c6af', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:120}] to localhost:27017
+2018-10-01 18:21:00.061  INFO 7396 --- [cluster-ClusterId{value='5bb218341900ca1ce433c6af', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2633283}
+2018-10-01 18:21:00.062  INFO 7396 --- [cluster-ClusterId{value='5bb218341900ca1ce433c6af', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-10-01 18:21:00.486  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-01 18:21:00.487  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2018-10-01 18:21:00.487  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-01 18:21:00.487  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-01 18:21:00.488  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-01 18:21:00.488  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2018-10-01 18:21:00.488  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-10-01 18:21:00.823  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Qutap/saveProject],methods=[POST]}" onto public com.exilant.CommonUtils.Response com.exilant.controller.ProjectInfoController.saveProjectInfo(com.exilant.model.ProjectInfoModel,javax.servlet.http.HttpServletRequest)
+2018-10-01 18:21:00.825  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Qutap/ProjectData/{projectId}],methods=[GET]}" onto public java.lang.Object com.exilant.controller.ProjectInfoController.getProjectInfo(java.lang.String,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-10-01 18:21:00.825  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Qutap/ProjectData],methods=[GET]}" onto public java.lang.Object com.exilant.controller.ProjectInfoController.getProjectListInfo(javax.servlet.http.HttpServletRequest)
+2018-10-01 18:21:00.830  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-10-01 18:21:00.831  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-10-01 18:21:00.831  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-10-01 18:21:00.835  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-01 18:21:00.836  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-01 18:21:00.921  INFO 7396 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-10-01 18:21:00.934  INFO 7396 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-10-01 18:21:00.935  INFO 7396 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-10-01 18:21:00.936  INFO 7396 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-01 18:21:01.088  INFO 7396 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-10-01 18:21:01.160  INFO 7396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-01 18:21:01.324  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@298557d: startup date [Mon Oct 01 18:20:57 IST 2018]; root of context hierarchy
+2018-10-01 18:21:01.370  INFO 7396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-01 18:21:01.371  INFO 7396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-01 18:21:01.622  INFO 7396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-10-01 18:21:01.687  INFO 7396 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-01 18:21:01.702  INFO 7396 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-10-01 18:21:01.703  INFO 7396 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-10-01 18:21:01.716  INFO 7396 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-10-01 18:21:01.748  INFO 7396 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-10-01 18:21:01.928  INFO 7396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2018-10-01 18:21:02.017  INFO 7396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
+2018-10-01 18:21:02.022  INFO 7396 --- [restartedMain] c.e.QutapApplication.QutapApplication    : Started QutapApplication in 5.036 seconds (JVM running for 5.707)
+2018-10-01 18:21:05.358  INFO 7396 --- [http-nio-9001-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-01 18:21:05.359  INFO 7396 --- [http-nio-9001-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-01 18:21:05.376  INFO 7396 --- [http-nio-9001-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2018-10-01 18:21:05.445  INFO 7396 --- [http-nio-9001-exec-2] c.e.controller.ProjectInfoController     : url of the applicationhttp://localhost:9001/Qutap/saveProject
+2018-10-01 18:21:05.531  INFO 7396 --- [http-nio-9001-exec-2] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:121}] to localhost:27017
+2018-10-01 18:26:06.350  INFO 7396 --- [Thread-8] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@298557d: startup date [Mon Oct 01 18:20:57 IST 2018]; root of context hierarchy
+2018-10-01 18:26:06.363  INFO 7396 --- [Thread-8] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-10-01 18:26:06.365  INFO 7396 --- [Thread-8] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-10-01 18:26:06.376  INFO 7396 --- [Thread-8] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:121}] to localhost:27017 because the pool has been closed.
+2018-10-01 18:26:59.027  INFO 7396 --- [restartedMain] c.e.QutapApplication.QutapApplication    : Starting QutapApplication on EXIMR-IM-482 with PID 7396 (/Users/chandni.v/git/qutap/QutapApplication/target/classes started by chandni.v in /Users/chandni.v/git/qutap/QutapApplication)
+2018-10-01 18:26:59.028  INFO 7396 --- [restartedMain] c.e.QutapApplication.QutapApplication    : No active profile set, falling back to default profiles: default
+2018-10-01 18:26:59.030  INFO 7396 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@56213153: startup date [Mon Oct 01 18:26:59 IST 2018]; root of context hierarchy
+2018-10-01 18:26:59.558  INFO 7396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
+2018-10-01 18:26:59.560  INFO 7396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-10-01 18:26:59.560  INFO 7396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-10-01 18:26:59.569  INFO 7396 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-10-01 18:26:59.570  INFO 7396 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 540 ms
+2018-10-01 18:26:59.634  INFO 7396 --- [localhost-startStop-1] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-10-01 18:26:59.635  INFO 7396 --- [localhost-startStop-1] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2018-10-01 18:26:59.639  INFO 7396 --- [cluster-ClusterId{value='5bb2199b1900ca1ce433c6b3', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:124}] to localhost:27017
+2018-10-01 18:26:59.639  INFO 7396 --- [cluster-ClusterId{value='5bb2199b1900ca1ce433c6b3', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=453658}
+2018-10-01 18:26:59.640  INFO 7396 --- [cluster-ClusterId{value='5bb2199b1900ca1ce433c6b3', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-10-01 18:26:59.713  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-01 18:26:59.713  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2018-10-01 18:26:59.713  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-01 18:26:59.713  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-01 18:26:59.714  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-01 18:26:59.714  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2018-10-01 18:26:59.714  INFO 7396 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-10-01 18:26:59.813  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Qutap/saveProject],methods=[POST]}" onto public com.exilant.CommonUtils.Response com.exilant.controller.ProjectInfoController.saveProjectInfo(com.exilant.model.ProjectInfoModel,javax.servlet.http.HttpServletRequest)
+2018-10-01 18:26:59.814  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Qutap/ProjectData/{projectId}],methods=[GET]}" onto public java.lang.Object com.exilant.controller.ProjectInfoController.getProjectInfo(java.lang.String,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-10-01 18:26:59.814  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Qutap/ProjectData],methods=[GET]}" onto public java.lang.Object com.exilant.controller.ProjectInfoController.getProjectListInfo(javax.servlet.http.HttpServletRequest)
+2018-10-01 18:26:59.816  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-10-01 18:26:59.817  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-10-01 18:26:59.817  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-10-01 18:26:59.819  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-01 18:26:59.820  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-01 18:26:59.870  INFO 7396 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-10-01 18:26:59.873  INFO 7396 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-10-01 18:26:59.873  INFO 7396 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-10-01 18:26:59.873  INFO 7396 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-01 18:26:59.901  INFO 7396 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-10-01 18:26:59.918  INFO 7396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-01 18:26:59.956  INFO 7396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@56213153: startup date [Mon Oct 01 18:26:59 IST 2018]; root of context hierarchy
+2018-10-01 18:26:59.996  INFO 7396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-01 18:26:59.996  INFO 7396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-01 18:27:00.068  INFO 7396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-10-01 18:27:00.101  INFO 7396 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-01 18:27:00.109  INFO 7396 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-10-01 18:27:00.109  INFO 7396 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-10-01 18:27:00.110  INFO 7396 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-10-01 18:27:00.116  INFO 7396 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-10-01 18:27:00.180  INFO 7396 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2018-10-01 18:27:00.219  INFO 7396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
+2018-10-01 18:27:00.220  INFO 7396 --- [restartedMain] c.e.QutapApplication.QutapApplication    : Started QutapApplication in 1.219 seconds (JVM running for 363.913)
+2018-10-01 18:27:00.224  INFO 7396 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   LogFileWebEndpointAutoConfiguration#logFileWebEndpoint matched:
+      - Log File found logging.path "file:///Users/chandni.v/Desktop/logger" (LogFileWebEndpointAutoConfiguration.LogFileCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.logging.LogFileWebEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2018-10-01 18:30:50.810  INFO 7396 --- [Thread-24] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@56213153: startup date [Mon Oct 01 18:26:59 IST 2018]; root of context hierarchy
+2018-10-01 18:30:50.830  INFO 7396 --- [Thread-24] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-10-01 18:30:50.831  INFO 7396 --- [Thread-24] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown

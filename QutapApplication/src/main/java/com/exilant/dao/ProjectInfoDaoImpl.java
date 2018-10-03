@@ -66,5 +66,22 @@ public class ProjectInfoDaoImpl implements ProjectInfoDao{
 			return null;
 		}
 	}
+	
+	@Override
+	public Response updateProjectInfo(ProjectInfoDomain projectInfoDomain) {
+		Response response=Utils.getResponseObject("Adding project Details");
+		try {
+			getProjectInfo(projectInfoDomain.getProjectId());
+		response.setStatus(StatusCode.SUCCESS.name());
+		response.setData(projectInfoDomain);
+		return response;
+		}catch (Exception e) {
+			log.info(e.getMessage());
+			response.setStatus(StatusCode.FAILURE.name());
+			response.setErrors(e.getMessage());
+			return response;
+		}
+		
+	}
 }
 

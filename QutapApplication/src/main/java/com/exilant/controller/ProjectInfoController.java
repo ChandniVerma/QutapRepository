@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -78,5 +79,14 @@ public class ProjectInfoController {
 		}
 		
 		return Utils.getJson(response);
+	}
+	
+	@PutMapping("/updateProject")
+	public Response updateProjectInfo(@RequestBody ProjectInfoModel projectInfoModel,HttpServletRequest req) { 
+		log.info("url of the application"+req.getRequestURL().toString());
+		Response response=projectInfoService.updateProjectInfo(projectInfoModel);
+		response.setUrl(req.getRequestURL().toString());
+		return response;
+		
 	}
 }
