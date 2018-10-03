@@ -1,9 +1,11 @@
 package com.exilant.service;
 
+import java.lang.reflect.Type;
 import java.util.List;
 import java.util.UUID;
 
 import org.apache.logging.log4j.Logger;
+import org.modelmapper.ModelMapper;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,10 @@ import com.exilant.controller.ProjectInfoController;
 import com.exilant.dao.ProjectInfoDao;
 import com.exilant.domain.ProjectInfoDomain;
 import com.exilant.model.ProjectInfoModel;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.reflect.TypeToken;
+
+
 
 @Service
 public class ProjectInfoServiceImpl implements ProjectInfoService{
@@ -56,11 +62,30 @@ public class ProjectInfoServiceImpl implements ProjectInfoService{
 	@Override
 	public List<ProjectInfoModel> getProjectListInfo() {
 		try {
-		return null;
+		List<ProjectInfoDomain>  projectInfoDomain=projectInfoDao.getProjectListInfo();
+		java.lang.reflect.Type typeToken=new TypeToken<List<ProjectInfoModel>>() {}.getType();
+	//	ObjectMapper mapper=new ObjectMapper();
+		ModelMapper mapper=new ModelMapper();
+		List<ProjectInfoModel> projectInfoModel=mapper.map(projectInfoDomain, typeToken);
+		return projectInfoModel;
 		}catch(Exception e) {
-			
+			log.info(e.getMessage());
+			return null;
 		}
-		return null;
+	}
+
+	@Override
+	public Response updateProjectInfo(ProjectInfoModel projectInfoModel) {
+		try {
+			ProjectInfoDomain projectInfoDomain=new ProjectInfoDomain();
+			
+			
+			BeanUtils.copyProperties(projectInfoModel, projectInfoDomain);
+			Response response=projectInfoDao.saveProjectInfo(projectInfoDomain);
+			return response;
+			}catch (Exception e) {	
+				log.info(e.getMessage());
+			}return null;
 	}
 
 	

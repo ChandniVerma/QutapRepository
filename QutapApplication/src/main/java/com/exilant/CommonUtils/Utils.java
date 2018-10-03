@@ -27,7 +27,7 @@ public class Utils {
 		}
 		return "";
 	}
-	public static Object getJson(Object obj) throws IOException {
+	public static String getJson(Object obj) throws IOException {
 		try {
 			return mapper.writeValueAsString(obj);
 		} catch (JsonProcessingException e) {

@@ -15,4 +15,6 @@ public interface ProjectInfoDao {
 	
 	public List<ProjectInfoDomain> getProjectListInfo();
 
+	Response updateProjectInfo(ProjectInfoDomain projectInfoDomain);
+
 }

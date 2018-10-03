@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.exilant.CommonUtils.ErrorObject;
 import com.exilant.CommonUtils.Response;
 import com.exilant.CommonUtils.StatusCode;
 import com.exilant.CommonUtils.Utils;
@@ -46,13 +47,14 @@ public class ProjectInfoController {
 	}
 	
 	@GetMapping("/ProjectData/{projectId}")
-	public   @ResponseBody Object getProjectInfo(@PathVariable String projectId,HttpServletRequest req) throws IOException {
+	public   @ResponseBody String getProjectInfo(@PathVariable String projectId,HttpServletRequest req) throws IOException {
 		Response response=Utils.getResponseObject("getting project details data");
 		
 		
 		ProjectInfoModel projectInfoModel=projectInfoService.getProjectInfo(projectId);
 		if(projectInfoModel==null) {
 			response.setStatus(StatusCode.FAILURE.name());
+			ErrorObject err=Utils.getErrorResponse("project info data", "no data found in detail");
 		}else {
 			response.setStatus(StatusCode.SUCCESS.name());
 			response.setUrl(req.getRequestURL().toString());
@@ -60,28 +62,21 @@ public class ProjectInfoController {
 		}
 		return Utils.getJson(response);
 		
-	}
-	@GetMapping("/ProjectData")
-	public  Object getProjectListInfo(HttpServletRequest req) {
-		Response response=Utils.getResponseObject("getting project details data");
-		try {
 		
+	}
+	@GetMapping("/ListData")
+	public  @ResponseBody String getProjectListInfo(HttpServletRequest req) throws IOException {
+		Response response=Utils.getResponseObject("getting project details data");
 		List<ProjectInfoModel> projectInfoModel=projectInfoService.getProjectListInfo();
 		if(projectInfoModel==null) {
 			response.setStatus(StatusCode.FAILURE.name());
+			ErrorObject err=Utils.getErrorResponse("project info data", "no list of data found in detail");
 		}else {
 			response.setStatus(StatusCode.SUCCESS.name());
 			response.setUrl(req.getRequestURL().toString());
-			response.setData(projectInfoModel);
-			return   Utils.getJson(response);	
+			response.setData(projectInfoModel);	
 		}
-		}catch(Exception e) {
-			
-			response.setStatus(StatusCode.FAILURE.name());
-			response.setErrors(e.getMessage());
-			log.info(e.getMessage());
-		}
-		return null;
 		
+		return Utils.getJson(response);
 	}
 }

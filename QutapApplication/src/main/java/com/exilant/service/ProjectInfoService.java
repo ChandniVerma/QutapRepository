@@ -13,4 +13,6 @@ public interface ProjectInfoService {
 
 	public List<ProjectInfoModel> getProjectListInfo();
 
+	Response updateProjectInfo(ProjectInfoModel projectInfoModel);
+
 }
